@@ -8,10 +8,11 @@ exports.up = function(knex) {
       .notNullable()
       .unique();
     tbl.string('password', 256).notNullable()
+    tbl.string('department', 256)
 
   })
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropIfTableExists('users')
+  return knex.schema.dropTableIfExists('users')
 };
