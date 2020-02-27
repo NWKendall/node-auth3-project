@@ -13,7 +13,7 @@ function getUsers(){
 
 function getUser(filter){
   return db('users')
-    .select('username', 'password', 'id')
+    .select('username', 'password', 'id', 'department')
     .where(filter)
 }
 
